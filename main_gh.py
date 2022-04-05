@@ -92,13 +92,15 @@ if st.button("Retrieve Tweets"):
         flag = True
         
     except tweepy.errors.TooManyRequests:
-        print("Oh No!!! We've reached the twitter request limit. Please wait for 15 minutes :'(")
+        st.write("Oh No!!! We've reached the twitter request limit. Please wait for 15 minutes :'(")
         ph = st.empty()
         N = 15*60
         for secs in range(N,0,-1):
             mm, ss = secs//60, secs%60
             ph.metric("Countdown", f"{mm:02d}:{ss:02d}")
             time.sleep(1)
+            
+        
 
 # Rest of the code
 if flag == True:
