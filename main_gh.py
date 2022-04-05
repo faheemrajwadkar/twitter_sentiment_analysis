@@ -32,7 +32,7 @@ from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
 from PIL import Image
 
 # change directory
-os.chdir(r'C:\Users\Fahim Usman\Documents\Edu\Data Science\Python\code\NLP Project - Twitter Analytics')
+# os.chdir(r'C:\Users\Fahim Usman\Documents\Edu\Data Science\Python\code\NLP Project - Twitter Analytics')
 
 
 st.markdown('<style>' + open('icon.css').read() + '</style>', unsafe_allow_html=True)
