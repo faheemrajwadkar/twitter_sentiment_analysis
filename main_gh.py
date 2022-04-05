@@ -42,12 +42,18 @@ st.write('\t*A small web app by Faheem Rajwadkar*')
 
 
 # Importing the keys
-key = open('key.txt', 'r')
-consumer_key = key.readline().strip()
-consumer_secret = key.readline().strip()
-access_token = key.readline().strip()
-access_token_secret = key.readline().strip()
-key.close()
+# key = open('key.txt', 'r')
+# consumer_key = key.readline().strip()
+# consumer_secret = key.readline().strip()
+# access_token = key.readline().strip()
+# access_token_secret = key.readline().strip()
+# key.close()
+
+# get key from streamlit secrets
+consumer_key = st.secrets.twitter_api.consumer_key
+consumer_secret = st.secrets.twitter_api.consumer_secret
+access_token = st.secrets.twitter_api.access_token
+access_token_secret = st.secrets.twitter_api.access_token_secret
 
 
 # Establish the connection with API
